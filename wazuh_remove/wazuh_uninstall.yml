@@ -1,0 +1,6 @@
+---
+- name: Completely remove Wazuh Agent from remote hosts
+  hosts: all
+  become: yes # Required for systemctl and apt actions
+  roles:
+    - wazuh_remove
